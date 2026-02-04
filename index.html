@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsabilidad Sexual = Salud Sexual | Un enfoque integral para el bienestar masculino</title>
+    <style>
+        :root {
+            --rainbow-1: #ff4d4d; --rainbow-2: #ff9f1c; --rainbow-3: #ffdd00;
+            --rainbow-4: #32cd32; --rainbow-5: #1e90ff; --rainbow-6: #8a2be2;
+            --primary: #8a2be2; --secondary: #1e90ff; --accent: #ff4d4d;
+            --light: #fffaf0; --dark: #1a0d2e; --success: #32cd32; --warning: #ff9f1c;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6; color:#222;
+            background: linear-gradient(135deg, #f9f0ff, #e6f0ff, #fff0f5);
+        }
+        header {
+            background: linear-gradient(90deg, var(--rainbow-1), var(--rainbow-2), var(--rainbow-3), var(--rainbow-4), var(--rainbow-5), var(--rainbow-6));
+            color:white; padding:3rem 1rem; text-align:center;
+            box-shadow:0 6px 20px rgba(0,0,0,0.25);
+        }
+        h1 { font-size:2.8rem; margin-bottom:0.8rem; text-shadow:0 3px 10px rgba(0,0,0,0.4); }
+        .subtitle { font-size:1.3rem; max-width:900px; margin:0 auto; opacity:0.95; }
+        .container { max-width:1200px; margin:2rem auto; padding:0 1.5rem; }
+        section {
+            background:white; margin:2rem 0; padding:2.2rem;
+            border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,0.12);
+            border:1px solid rgba(138,43,226,0.12);
+        }
+        h2 {
+            color:var(--primary); margin-bottom:1.4rem; font-size:2.2rem;
+            position:relative; display:inline-block;
+        }
+        h2:after {
+            content:''; position:absolute; bottom:-6px; left:0; width:100%; height:4px;
+            background:linear-gradient(90deg, var(--rainbow-5), var(--rainbow-6));
+            border-radius:4px;
+        }
+        h3 { color:var(--secondary); font-size:1.6rem; margin:1.8rem 0 1rem; }
+        .stats-grid {
+            display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+            gap:1.5rem; margin:2rem 0;
+        }
+        .stat-card {
+            background:linear-gradient(135deg,#ffffff,#f8f5ff); padding:1.6rem;
+            border-radius:12px; border-left:6px solid var(--rainbow-5);
+            box-shadow:0 4px 12px rgba(0,0,0,0.08);
+        }
+        .stat-number { font-size:2.6rem; font-weight:bold; color:var(--accent); }
+        table { width:100%; border-collapse:collapse; margin:1.5rem 0; }
+        th,td { padding:1rem; text-align:center; border:1px solid #ddd; }
+        th { background:var(--rainbow-6); color:white; }
+        tr:nth-child(even) { background:#f8f5ff; }
+        .highlight, .contrast-box {
+            padding:1rem; margin:1.5rem 0; border-radius:0 12px 12px 0;
+        }
+        .highlight { background:#fff5f7; border-left:6px solid var(--rainbow-2); }
+        .contrast-box { background:linear-gradient(135deg,#f0f8ff,#fff5f7); border-left:6px solid var(--rainbow-5); }
+        .source-link {
+            font-size:0.85rem; color:#555; display:block; margin-top:0.5rem;
+        }
+        .source-link a { color:var(--rainbow-5); text-decoration:none; }
+        .source-link a:hover { text-decoration:underline; }
+        .contact-info {
+            background:linear-gradient(135deg,var(--rainbow-6),var(--rainbow-5),var(--rainbow-4));
+            color:white; padding:2.5rem; border-radius:16px;
+        }
+        .form-button {
+            background:linear-gradient(90deg,var(--rainbow-5),var(--rainbow-6)); color:white;
+            padding:1.1rem 2.4rem; border:none; border-radius:50px; font-size:1.2rem;
+            font-weight:bold; text-decoration:none; display:inline-block;
+            transition:all 0.3s; box-shadow:0 6px 20px rgba(30,144,255,0.4);
+        }
+        .form-button:hover { transform:translateY(-3px); box-shadow:0 10px 30px rgba(138,43,226,0.5); }
+        footer {
+            background:var(--dark); color:#ddd; text-align:center;
+            padding:2.5rem 1rem; margin-top:4rem; border-top:4px solid var(--primary);
+        }
+        .stress-section {
+            background:linear-gradient(135deg,#fff5f7,#f0f8ff,#f5f0ff);
+            border:3px solid var(--rainbow-5); border-radius:20px;
+        }
+        .main-stress-bar {
+            background:linear-gradient(90deg,var(--rainbow-1),var(--rainbow-2),var(--rainbow-3),var(--rainbow-4),var(--rainbow-5));
+        }
+        .add-stress-btn { background:var(--rainbow-3); color:#222; }
+        .add-stress-btn:hover { background:#ffeb3b; }
+        .release-all-btn { background:linear-gradient(90deg,var(--rainbow-4),var(--rainbow-5)); color:white; }
+        .release-all-btn:hover { background:linear-gradient(90deg,var(--rainbow-5),var(--rainbow-6)); }
+        
+        /* Acordeones */
+        .accordion-container { margin:2rem 0; }
+        .accordion-item {
+            background:white; margin:1rem 0; border-radius:12px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.1); overflow:hidden;
+            border:1px solid rgba(138,43,226,0.15);
+        }
+        .accordion-header {
+            width:100%; padding:1.5rem; background:linear-gradient(135deg,var(--rainbow-5),var(--rainbow-6));
+            color:white; border:none; cursor:pointer; font-size:1.3rem; font-weight:bold;
+            display:flex; justify-content:space-between; align-items:center; transition:all 0.3s;
+        }
+        .accordion-header:hover { background:linear-gradient(135deg,var(--rainbow-6),var(--primary)); transform:translateY(-2px); }
+        .accordion-icon { transition:transform 0.3s; font-size:1.2rem; }
+        .accordion-icon.open { transform:rotate(180deg); }
+        .accordion-content {
+            max-height:0; overflow:hidden; transition:max-height 0.5s ease-out;
+            padding:0 2rem; background:#fafbff;
+        }
+        .accordion-content.open { max-height:3000px; padding:2rem; transition:max-height 0.5s ease-in; }
+        
+        /* Barra de Estrés */
+        .stress-section {
+            background:linear-gradient(135deg,#fff5f7,#f0f8ff,#f5f0ff);
+            border:3px solid var(--rainbow-5); border-radius:20px; padding:2rem;
+        }
+        .stress-causes {
+            display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+            gap:1rem; margin:1.5rem 0;
+        }
+        .stress-item {
+            display:flex; align-items:center; padding:0.8rem; background:white;
+            border-radius:8px; border:1px solid rgba(138,43,226,0.2);
+        }
+        .stress-item input[type="checkbox"] { margin-right:0.8rem; transform:scale(1.3); }
+        .stress-item input[type="text"] { 
+            border:2px solid var(--rainbow-5); border-radius:6px; padding:0.5rem;
+            font-size:1rem; width:100%; margin-top:0.5rem;
+        }
+        .stress-bar-container {
+            background:white; border-radius:15px; padding:0.5rem; margin:1.5rem 0;
+            box-shadow:inset 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .stress-bar {
+            height:40px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+            color:white; font-weight:bold; font-size:1.2rem; transition:all 0.5s ease;
+            background:linear-gradient(90deg,var(--rainbow-4),var(--rainbow-5));
+        }
+        .reset-btn {
+            background:var(--rainbow-6); color:white; border:none; padding:0.8rem 1.5rem;
+            border-radius:8px; cursor:pointer; font-size:1rem; margin-top:1rem;
+            transition:all 0.3s;
+        }
+        .reset-btn:hover { background:var(--primary); transform:translateY(-2px); }
+        
+        @media (max-width:768px) {
+            h1 {font-size:2.2rem;} .subtitle {font-size:1.1rem;} section {padding:1.6rem;}
+            .stress-causes { grid-template-columns:1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>PResponsabilidad Sexual = Salud Sexual | Un enfoque integral para el bienestar masculino</h1>
+        <p class="subtitle">Sinergias entre la Regulación Emocional, la Respuesta Inmune y la Gestión de Infecciones de Transmisión Sexual en Zacatecas y el Ámbito Global</p>
+    </div>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>Introducción</h2>
+        <p>La salud masculina en la tercera década del siglo XXI demanda un enfoque transdisciplinario que logre amalgamar los datos epidemiológicos crudos con las realidades psicosociales y emocionales de los varones. Este análisis se sustenta en la evidencia de que el bienestar biológico no puede disociarse de los procesos neuroendocrinos mediados por la psique, una premisa central de la psiconeuroinmunología clínica.</p>
+    </section>
+
+    <section>
+        <h2>Marco Epidemiológico Global y Nacional: Tendencias y Desafíos para 2024-2025</h2>
+        <p>El contexto internacional y nacional de las infecciones de transmisión sexual se encuentra en un punto crítico. A continuación se presentan los datos contrastados entre la situación global y la realidad mexicana:</p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h4>Nuevas ITS Globales</h4>
+                <div class="stat-number">374M+</div>
+                <p>Más de 374 millones de nuevas infecciones anuales por sífilis, gonorrea, clamidiosis y tricomoniasis.</p>
+                <div class="source-link">Fuente: <a href="https://www.who.int/news/item/21-05-2024-new-report-flags-major-increase-in-sexually-transmitted-infections" target="_blank">OMS 2024</a></div>
+            </div>
+            <div class="stat-card">
+                <h4>Personas con VIH Global</h4>
+                <div class="stat-number">40.8M</div>
+                <p>Estimación global de personas viviendo con VIH al cierre de 2024.</p>
+                <div class="source-link">Fuente: <a href="https://www.unaids.org/en/resources/documents/2024/global-aids-update-2024" target="_blank">ONUSIDA 2024</a></div>
+            </div>
+        </div>
+
+        <h3>1. Nuevas infecciones por ITS en México vs. Global</h3>
+        <table>
+            <tr><th>Indicador</th><th>Global</th><th>México</th></tr>
+            <tr><td>Nuevas ITS anuales</td><td>374 millones</td><td>200,000+ (2023)</td></tr>
+            <tr><td>Sífilis (casos)</td><td>No especificado</td><td>60,000+ (2023)</td></tr>
+            <tr><td>Gonorrea (casos)</td><td>No especificado</td><td>50,000 (2023)</td></tr>
+            <tr><td>Tasa de sífilis</td><td>Variable</td><td>47.8 por 100,000 hab.</td></tr>
+        </table>
+        <div class="contrast-box">
+            <p>Aunque México representa menos del 2% de la carga global de ITS, la tendencia es ascendente...</p>
+            <div class="source-link">Fuente: <a href="https://www.gob.mx/salud/documentos/boletin-epidemiologico" target="_blank">Boletín Epidemiológico – Secretaría de Salud</a></div>
+        </div>
+
+        <h3>2. VIH en México vs. Global: Brecha de Género en Tratamiento</h3>
+        <table>
+            <tr><th>Indicador de VIH</th><th>Global</th><th>México</th></tr>
+            <tr><td>Cobertura TAR mujeres</td><td>83%</td><td>82%</td></tr>
+            <tr><td>Cobertura TAR hombres</td><td>73%</td><td>68% (conocen su estado)</td></tr>
+            <tr><td>Brecha de género</td><td>10 puntos</td><td>14 puntos</td></tr>
+        </table>
+        <div class="contrast-box">
+            <p>La brecha de género en el acceso a la salud es más pronunciada en México...</p>
+            <div class="source-link">Fuente: <a href="https://www.unaids.org/en/resources/documents/2024/global-aids-update-2024" target="_blank">ONUSIDA 2024</a></div>
+        </div>
+
+        <h3>3. Mortalidad y Morbilidad Específica en Hombres</h3>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h4>Mortalidad por VIH México 2024</h4>
+                <div class="stat-number">5,149</div>
+                <p>Fallecimientos relacionados con VIH. El 80% (8 de cada 10 defunciones) ocurrieron en hombres.</p>
+                <div class="source-link">Fuente: <a href="https://www.gob.mx/salud/documentos/boletin-epidemiologico" target="_blank">Boletín Epidemiológico 2024</a></div>
+            </div>
+            <div class="stat-card">
+                <h4>Mpox (Viruela Símica)</h4>
+                <div class="stat-number">97%</div>
+                <p>De los casos confirmados en México hasta octubre 2024 correspondieron a hombres, con el grupo de edad de 30 a 34 años como el más afectado.</p>
+                <div class="source-link">Fuente: <a href="https://www.gob.mx/salud/documentos/boletin-epidemiologico" target="_blank">Boletín Epidemiológico 2024</a></div>
+            </div>
+        </div>
+        <div class="contrast-box">
+            <p><strong>Patrón alarmante:</strong> La sobremortalidad masculina en VIH refleja barreras estructurales en la búsqueda de atención médica y diagnósticos tardíos. Los hombres tienden a buscar ayuda cuando la enfermedad está avanzada.</p>
+        </div>
+
+        <h3>4. Principales Causas de Muerte en Hombres Zacatecas</h3>
+        <table>
+            <tr><th>Causa</th><th>Porcentaje</th><th>Comentarios</th></tr>
+            <tr><td>Enfermedades del corazón</td><td>25%</td><td>Principal causa de muerte masculina</td></tr>
+            <tr><td>Tumores malignos (próstata)</td><td>18%</td><td>Cáncer con mayor impacto en hombres</td></tr>
+            <tr><td>Diabetes mellitus</td><td>15%</td><td>En aumento por factores de estilo de vida</td></tr>
+            <tr><td>Accidentes</td><td>12%</td><td>Mayor incidencia en hombres jóvenes</td></tr>
+            <tr><td>Influenza/neumonía</td><td>8%</td><td>Complicaciones respiratorias frecuentes</td></tr>
+        </table>
+        <div class="highlight">
+            <p><strong>Observación crítica:</strong> Muchas de estas causas están relacionadas con estilos de vida masculinos tradicionales, falta de prevención y barreras para la búsqueda de atención médica temprana.</p>
+            <div class="source-link">Fuente: <a href="https://www.inegi.org.mx/temas/mortalidad/" target="_blank">INEGI – Estadísticas de Mortalidad 2024</a></div>
+        </div>
+
+        <h3>5. Brechas de Género en Salud Mental Zacatecas</h3>
+        <table>
+            <tr><th>Indicador</th><th>Hombres</th><th>Mujeres</th><th>Brecha</th><th>Interpretación</th></tr>
+            <tr><td>Tasa de suicidio (x100k)</td><td>11.2</td><td>2.6</td><td>4.3x</td><td>Hombres 4 veces más vulnerables</td></tr>
+            <tr><td>Depresión diagnosticada</td><td>599</td><td>1,817</td><td>3x</td><td>Subdiagnóstico en hombres</td></tr>
+            <tr><td>Búsqueda de ayuda psicológica</td><td>23%</td><td>67%</td><td>2.9x</td><td>Barreras masculinas</td></tr>
+            <tr><td>Intentos de suicidio</td><td>142</td><td>287</td><td>2x</td><td>Letalidad mayor en hombres</td></tr>
+        </table>
+        <div class="contrast-box">
+            <p><strong>Análisis de brechas:</strong> Aunque las mujeres reportan más depresión, los hombres tienen tasas de suicidio 4.3 veces mayores. Esto sugiere un diagnóstico deficiente y barreras culturales que impiden que los hombres busquen ayuda o expresen sus emociones.</p>
+            <p><strong>Factor clave:</strong> La presión masculina tradicional por ser "fuerte" y "no mostrar debilidad" se traduce en consecuencias mortales cuando no se interviene tempranamente.</p>
+            <div class="source-link">Fuente: <a href="https://www.inegi.org.mx/temas/mortalidad/" target="_blank">INEGI 2024</a> y <a href="https://www.gob.mx/salud/documentos/boletin-epidemiologico" target="_blank">Boletín Epidemiológico</a></div>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Análisis de Datos Oficiales 2024: Zacatecas en Contexto Nacional</h2>
+        <h3>Casos Acumulados Anuales en Zacatecas (Cierre 2024)</h3>
+        <table>
+            <tr><th>Condición de Salud</th><th>Hombres</th><th>Mujeres</th><th>Total</th></tr>
+            <tr><td>Sífilis Adquirida</td><td>413</td><td>475</td><td>888</td></tr>
+            <tr><td>Infección Gonocócica</td><td>315</td><td>384</td><td>699</td></tr>
+            <tr><td>VIH (Nuevos diagnósticos)</td><td>105</td><td>13</td><td>118</td></tr>
+            <tr><td>Depresión</td><td>599</td><td>1,817</td><td>2,416</td></tr>
+        </table>
+        <div class="highlight">
+            <p>Notable: La tasa de suicidio en Zacatecas es de 8.8 por cada 100,000 habitantes...</p>
+            <div class="source-link">Fuente: <a href="https://www.inegi.org.mx/temas/mortalidad/" target="_blank">INEGI – Estadísticas de Mortalidad 2024</a> y <a href="https://www.gob.mx/salud/documentos/boletin-epidemiologico" target="_blank">Boletín Epidemiológico</a></div>
+        </div>
+        <div class="source-link">Datos locales: <a href="https://www.gob.mx/salud/documentos/boletin-epidemiologico" target="_blank">SUIVE / SSZ 2024</a></div>
+    </section>
+
+    <section>
+        <h2>Salud Emocional y Biopsicosocial</h2>
+        <p>La gestión de las emociones no es solo un ejercicio "mental", sino una intervención biológica directa que impacta nuestra salud inmunológica y vulnerabilidad frente a infecciones.</p>
+        
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <button id="psicoinmunologia-btn" class="accordion-header" onclick="toggleAccordion('psicoinmunologia')" 
+                        aria-expanded="false" 
+                        aria-controls="psicoinmunologia"
+                        role="button">
+                    <span>Psiconeuroinmunología: El Vínculo Científico entre Emoción y Cuerpo</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content" id="psicoinmunologia" 
+                     role="region" 
+                     aria-labelledby="psicoinmunologia-btn">
+                    <h3>El Mecanismo de la Inmunosupresión por Estrés</h3>
+                    <p>El cuerpo humano no distingue entre una amenaza física (un depredador) y una amenaza emocional (temor al juicio, represión de la tristeza o ira contenida). En ambos casos, el sistema nervioso activa el eje hipotálamo-pituitario-adrenal (HPA), liberando hormonas como el cortisol y catecolaminas.</p>
+                    
+                    <div class="highlight">
+                        <h4>La presencia crónica de cortisol en el organismo produce:</h4>
+                        <ul>
+                            <li><strong>Reducción de Linfocitos T:</strong> Estas células son fundamentales para combatir virus (incluyendo el VIH y el VPH). El estrés crónico disminuye su capacidad de proliferación y su eficacia citotóxica.</li>
+                            <li><strong>Alteración de la Producción de Anticuerpos:</strong> La respuesta de las células B se ve comprometida, lo que reduce la eficacia de la inmunidad adquirida.</li>
+                            <li><strong>Inflamación de Bajo Grado:</strong> Paradójicamente, mientras se suprimen las defensas específicas, el estrés promueve una inflamación sistémica que daña los tejidos y acelera el desarrollo de enfermedades cardiovasculares y metabólicas.</li>
+                        </ul>
+                    </div>
+                    
+                    <p>La psiconeuroinmunología (PNI) es la ciencia que estudia esta comunicación bidireccional entre el sistema nervioso central, el sistema endocrino y el sistema inmunológico, demostrando que el bienestar biológico no puede disociarse de los procesos neuroendocrinos mediados por la psique.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button id="represion-btn" class="accordion-header" onclick="toggleAccordion('represion')" 
+                        aria-expanded="false" 
+                        aria-controls="represion"
+                        role="button">
+                    <span>Represión Emocional y Vulnerabilidad Inmunológica</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content" id="represion" 
+                     role="region" 
+                     aria-labelledby="represion-btn">
+                    <h3>La Ciencia detrás de la Vulnerabilidad</h3>
+                    <p>En la cultura masculina tradicional, la vulnerabilidad se percibe como una debilidad. Sin embargo, desde la PNI, la represión de emociones como el miedo o el dolor se asocia con alteraciones funcionales de las células inmunes.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>Evidencia Científica</h4>
+                            <p>Se ha observado que los individuos que cuentan con redes de apoyo y que expresan sus estados emocionales de manera asertiva presentan mejores conteos de:</p>
+                            <ul>
+                                <li><strong>CD3+:</strong> Linfocitos T totales</li>
+                                <li><strong>CD4+:</strong> Linfocitos T ayudadores</li>
+                                <li><strong>CD19+:</strong> Células B productoras de anticuerpos</li>
+                            </ul>
+                            <p>Esto les confiere una mayor capacidad de respuesta ante infecciones como VIH, VPH y otras ITS.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contrast-box">
+                        <p><strong>Conclusión clave:</strong> La expresión emocional no es un lujo psicológico, sino una necesidad biológica para mantener un sistema inmune funcional y reducir la vulnerabilidad frente a patógenos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button id="somatizacion-btn" class="accordion-header" onclick="toggleAccordion('somatizacion')" 
+                        aria-expanded="false" 
+                        aria-controls="somatizacion"
+                        role="button">
+                    <span>Somatización: El Cuerpo como Espejo de la Salud Emocional</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content" id="somatizacion" 
+                     role="region" 
+                     aria-labelledby="somatizacion-btn">
+                    <h3>¿Qué es la Somatización?</h3>
+                    <p>La somatización ocurre cuando los conflictos psicológicos no procesados se manifiestan como síntomas físicos persistentes. Para los hombres, el cuerpo se convierte a menudo en el único vehículo permitido para expresar el malestar, dado que la verbalización de las emociones está estigmatizada.</p>
+                    
+                    <div class="highlight">
+                        <h4>Datos Relevantes en México</h4>
+                        <p>Estudios indican que cerca del <strong>14% de la población en México</strong> presenta trastornos de somatización, manifestándose comúnmente a través de cefaleas tensionales y problemas gastrointestinales.</p>
+                    </div>
+                    
+                    <h3>Manifestaciones Físicas Comunes en los Hombres</h3>
+                    <p>Los síntomas de la somatización suelen ser recurrentes y pueden confundirse con enfermedades orgánicas graves, generando ansiedad por la salud (hipocondría).</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>Musculoesqueléticos</h4>
+                            <p>Tensión crónica en cuello, hombros y espalda, resultante de un estado de alerta permanente.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Gastrointestinales</h4>
+                            <p>Dolor abdominal, náuseas, estreñimiento o diarrea, vinculados al eje intestino-cerebro y a la alteración de la microbiota por estrés.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Cardiovasculares y Respiratorios</h4>
+                            <p>Palpitaciones, taquicardia y sensación de falta de aire (disnea), frecuentemente asociados a ataques de pánico que el hombre interpreta como problemas cardíacos.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Sexuales</h4>
+                            <p>Pérdida de la libido, disfunción eréctil y pérdida del apetito sexual, que a menudo tienen un origen emocional pero se viven como un fracaso de la virilidad.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contrast-box">
+                        <p><strong>Alerta importante:</strong> El cuerpo masculino a menudo "grita" lo que la voz calla. Los síntomas físicos sin causa clara deben ser abordados desde una perspectiva que incluya la salud mental.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button id="nutricion-btn" class="accordion-header" onclick="toggleAccordion('nutricion')" 
+                        aria-expanded="false" 
+                        aria-controls="nutricion"
+                        role="button">
+                    <span>Nutrición y Ejercicio: Herramientas de Regulación Neuroinmune</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content" id="nutricion" 
+                     role="region" 
+                     aria-labelledby="nutricion-btn">
+                    <h3>La Sinergia entre Nutrición y Mente</h3>
+                    <p>La salud física relacionada con las emociones encuentra en la alimentación y el movimiento dos aliados fundamentales. La evidencia de 2024 resalta que una dieta adecuada puede prevenir patologías infecciosas y procesos inflamatorios.</p>
+                    
+                    <h4>Nutrientes Clave para la Estabilidad Emocional</h4>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>Ácido Fólico</h4>
+                            <p>Esencial para la síntesis de neurotransmisores como serotonina y dopamina.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Hierro</h4>
+                            <p>Previene la fatiga y mejora la función cognitiva.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Omega-3</h4>
+                            <p>Reduce la inflamación y mejora la salud cerebral.</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Magnesio</h4>
+                            <p>Regula el sistema nervioso y reduce el estrés.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight">
+                        <h4>Protección Antioxidante</h4>
+                        <p>Frutas y verduras proporcionan antioxidantes (flavonoides, carotenoides) que neutralizan los radicales libres, protegiendo al ADN del daño oxidativo y retrasando el envejecimiento del sistema inmune (inmunosenescencia).</p>
+                    </div>
+                    
+                    <h3>El Ejercicio como Antídoto del Estrés</h3>
+                    <p>La actividad física regular es descrita como una "meditación en movimiento" que ayuda a disolver las tensiones cotidianas.</p>
+                    
+                    <ul>
+                        <li><strong>Aumento de Endorfinas:</strong> El ejercicio aeróbico eleva los niveles de betaendorfinas, neurotransmisores que generan sensaciones de euforia y actúan como analgésicos naturales.</li>
+                        <li><strong>Regulación del Sistema Inmunitario:</strong> Al mejorar la circulación y reducir la presión arterial en reposo, el ejercicio fortalece las defensas y protege al cuerpo de los efectos nocivos del cortisol.</li>
+                    </ul>
+                    
+                    <div class="contrast-box">
+                        <p><strong>Recomendación:</strong> 30 minutos de ejercicio moderado diario puede reducir los niveles de estrés hasta en un 40% y mejorar significativamente la función inmunológica.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <!-- Barra de Estrés Interactiva -->
+        <div class="stress-section">
+            <h3>El Estrés y Soltar</h3>
+            <p>Selecciona las causas de estrés que identificas en tu vida. Este ejercicio te ayudará a reconocer los factores que impactan tu salud emocional y física.</p>
+            
+            <div class="stress-causes">
+                <div class="stress-item">
+                    <input type="checkbox" id="que-diran" onchange="updateStressBar()">
+                    <label for="que-diran">Miedo al qué dirán</label>
+                </div>
+                <div class="stress-item">
+                    <input type="checkbox" id="no-generar" onchange="updateStressBar()">
+                    <label for="no-generar">Inestabilidad económica</label>
+                </div>
+                <div class="stress-item">
+                    <input type="checkbox" id="presion" onchange="updateStressBar()">
+                    <label for="presion">Presión de masculinidad</label>
+                </div>
+                <div class="stress-item">
+                    <input type="checkbox" id="salud" onchange="updateStressBar()">
+                    <label for="salud">Problemas de salud</label>
+                </div>
+                <div class="stress-item">
+                    <input type="checkbox" id="relaciones" onchange="updateStressBar()">
+                    <label for="relaciones">Relaciones personales</label>
+                </div>
+                <div class="stress-item">
+                    <input type="checkbox" id="pareja" onchange="updateStressBar()">
+                    <label for="pareja">Problemas con la pareja</label>
+                </div>
+                <div class="stress-item">
+                    <input type="checkbox" id="familia" onchange="updateStressBar()">
+                    <label for="familia">Problemas con la familia</label>
+                </div>
+                <div class="stress-item">
+                    <input type="checkbox" id="aceptacion-familia" onchange="updateStressBar()">
+                    <label for="aceptacion-familia">Rechazo familiar</label>
+                </div>
+                <div class="stress-item">
+                    <input type="checkbox" id="discriminacion" onchange="updateStressBar()">
+                    <label for="discriminacion">Discriminación LGBT+</label>
+                </div>
+                <div class="stress-item">
+                    <input type="checkbox" id="salud-sexual" onchange="updateStressBar()">
+                    <label for="salud-sexual">Miedos sobre salud sexual</label>
+                </div>
+                <div class="stress-item">
+                    <input type="checkbox" id="visibilidad" onchange="updateStressBar()">
+                    <label for="visibilidad">Miedo a ser descubierto</label>
+                </div>
+                <div class="stress-item">
+                    <input type="checkbox" id="otro-check" onchange="updateStressBar()">
+                    <label for="otro-check">Otra causa:</label>
+                    <input type="text" id="otro-text" placeholder="Especificar" onchange="updateStressBar()">
+                </div>
+            </div>
+            
+            <div class="stress-bar-container">
+                <div class="stress-bar" id="stressBar">0%</div>
+            </div>
+            
+            <button class="reset-btn" onclick="resetStressBar()">Soltar (pide ayuda)</button>
+            
+            <div class="contrast-box">
+                <p><strong>Hay personas en el círculo dispuestas a ayudar con tu carga.</strong> Este es un espacio seguro donde encontrarás apoyo mutuo, comprensión y herramientas para manejar el estrés. No estás solo en este camino hacia el bienestar integral.</p>
+            </div>
+            
+            <div class="contrast-box">
+                <p><strong>Interpretación:</strong> El estrés crónico debilita tu sistema inmune y aumenta la vulnerabilidad a ITS. Reconocer estas presiones es el primer paso hacia la regulación emocional y el autocuidado.</p>
+            </div>
+            
+            <div class="accordion-item">
+                <button id="directorio-btn" class="accordion-header" onclick="toggleAccordion('directorio')" 
+                        aria-expanded="false" 
+                        aria-controls="directorio"
+                        role="button">
+                    <span>Directorio de Recursos en Zacatecas</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content" id="directorio" 
+                     role="region" 
+                     aria-labelledby="directorio-btn">
+                    <h3>Atención de ITS y VIH</h3>
+                    <p>Un componente esencial de la salud física y emocional es saber a dónde acudir. En Zacatecas, existe una unidad especializada que ofrece servicios gratuitos.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>UNEME CAPASITS Zacatecas</h4>
+                            <p><strong>Ubicación:</strong> <a href="https://maps.app.goo.gl/Wz5DxzFWtwPBatTJ6" target="_blank">Calle Sarh s/n, Parque Industrial, Guadalupe, Zac.</a></p>
+                            <p><strong>Teléfono:</strong> (492) 491 5000</p>
+                            <p><strong>Servicios:</strong> Pruebas de VIH/ITS, tratamiento antirretroviral, prevención, condones gratuitos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight">
+                        <p><strong>Nota importante:</strong> Todos los servicios son gratuitos y confidenciales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+    <script>
+        // Función para acordeones
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const button = content.previousElementSibling;
+            const icon = button.querySelector('.accordion-icon');
+            
+            // Cerrar otros acordeones
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                if (item.id !== id && item.classList.contains('open')) {
+                    item.classList.remove('open');
+                    const otherButton = item.previousElementSibling;
+                    otherButton.querySelector('.accordion-icon').classList.remove('open');
+                    otherButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            // Toggle acordeón actual
+            const isOpen = content.classList.toggle('open');
+            icon.classList.toggle('open');
+            button.setAttribute('aria-expanded', isOpen);
+        }
+        
+        // Función para barra de estrés
+        function updateStressBar() {
+            const checkboxes = [
+                document.getElementById('que-diran'),
+                document.getElementById('no-generar'), 
+                document.getElementById('presion'),
+                document.getElementById('salud'),
+                document.getElementById('relaciones'),
+                document.getElementById('pareja'),
+                document.getElementById('familia'),
+                document.getElementById('aceptacion-familia'),
+                document.getElementById('discriminacion'),
+                document.getElementById('salud-sexual'),
+                document.getElementById('visibilidad'),
+                document.getElementById('otro-check')
+            ];
+            
+            const otroText = document.getElementById('otro-text');
+            const stressBar = document.getElementById('stressBar');
+            
+            let checkedCount = 0;
+            checkboxes.forEach(checkbox => {
+                if (checkbox && checkbox.checked) {
+                    checkedCount++;
+                }
+            });
+            
+            // Considerar el campo "otro" si tiene texto
+            if (otroText && otroText.value.trim() !== '') {
+                checkedCount++;
+            }
+            
+            const percentage = Math.min((checkedCount / 12) * 100, 100);
+            stressBar.style.width = percentage + '%';
+            stressBar.textContent = Math.round(percentage) + '%';
+            
+            // Cambiar color según nivel de estrés
+            let color;
+            if (percentage <= 25) {
+                color = 'linear-gradient(90deg, #32cd32, #90ee90)'; // Verde
+            } else if (percentage <= 50) {
+                color = 'linear-gradient(90deg, #ffdd00, #ffeb3b)'; // Amarillo  
+            } else if (percentage <= 75) {
+                color = 'linear-gradient(90deg, #ff9f1c, #ffa500)'; // Naranja
+            } else {
+                color = 'linear-gradient(90deg, #ff4d4d, #ff6b6b)'; // Rojo
+            }
+            
+            stressBar.style.background = color;
+            
+            // Auto-marcar checkbox "otro" si se escribe texto
+            if (otroText && otroText.value.trim() !== '') {
+                document.getElementById('otro-check').checked = true;
+            }
+        }
+        
+        // Función para reiniciar barra de estrés
+        function resetStressBar() {
+            const checkboxes = document.querySelectorAll('.stress-causes input[type="checkbox"]');
+            const otroText = document.getElementById('otro-text');
+            const stressBar = document.getElementById('stressBar');
+            
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+            if (otroText) otroText.value = '';
+            
+            stressBar.style.width = '0%';
+            stressBar.textContent = '0%';
+            stressBar.style.background = 'linear-gradient(90deg,var(--rainbow-4),var(--rainbow-5))';
+        }
+        
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            // Abrir primer acordeón por defecto
+            const firstAccordion = document.querySelector('.accordion-content');
+            if (firstAccordion) {
+                firstAccordion.classList.add('open');
+                const firstButton = firstAccordion.previousElementSibling;
+                firstButton.querySelector('.accordion-icon').classList.add('open');
+                firstButton.setAttribute('aria-expanded', 'true');
+            }
+        });
+    </script>
+
+</div>
+
+    <!-- Buzón de Dudas y Comentarios - Sección Final -->
+    <section>
+        <h2>Buzón de Dudas y Comentarios</h2>
+        <p>Recuerda que el círculo de hombres diverso de la policlínica es un lugar seguro para compartir. Hay muchas personas a gusto que pueden ayudarte a soltar tu estrés y encontrar apoyo.</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h4>¿Por qué escribirnos?</h4>
+                <p>Este espacio es para que puedas dejar tus dudas y comentarios sobre temas de salud masculina, bienestar emocional, o cualquier inquietud que desees compartir de forma anónima y segura.</p>
+            </div>
+            <div class="stat-card">
+                <h4>Confidencialidad</h4>
+                <p>Toda la información compartida a través del formulario es tratada con absoluta confidencialidad y respeto. Tu identidad está protegida en todo momento. ya que este formulariuo y pagina no recopilan informacion personal.</p>
+            </div>
+        </div>
+        
+        <div class="contrast-box">
+            <p><strong>Tu voz importa:</strong> Cada comentario nos ayuda a mejorar nuestro servicios y entender mejor las necesidades de la comunidad. No estás solo en este camino hacia el bienestar integral.</p>
+        </div>
+        
+        <div class="contrast-box">
+            <p><strong>Encuesta breve:</strong> Al llenar el formulario, también te pediremos que completes una pequeña encuesta para poder desarrollar una actividad adicional, recuerda que tus respuestas son anonimas.</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRE1CzTMwlyRwAVvRsOn7o7u43vc2a8Iqnb3YutCfS6ie57w/viewform?usp=header" target="_blank" class="form-button">Dejar tus Dudas y Comentarios</a>
+        </div>
+    </section>
+
+<footer>
+    <p>© 2026 Responsabilidad Sexual = Salud Sexual | Un enfoque integral para el bienestar masculino | Zacatecas, México</p>
+    <p>Información basada en datos oficiales del Boletín Epidemiológico 2024 y reportes internacionales</p>
+    <p>Responsabilidad Sexual = Salud Sexual | Un enfoque integral para el bienestar masculino</p>
+</footer>
+
+</body>
+</html>
